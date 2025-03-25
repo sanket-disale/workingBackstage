@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: flipkart-order-service
-  description: Manages order processing, tracking, and history for Flipsters customers.
+  description: Manages order processing, tracking, and history for Flipss customers.
   annotations:
     github.com/project-slug: flipkart/flipkart-order-service
     backstage.io/techdocs-ref: dir:.
@@ -33,7 +33,7 @@ spec:
     - component:flipkart-inventory-service
     - component:flipkart-shipping-service
   links:
-    - url: https://docs.flipkart.com/apis/order-service
+    - url: https://www.google.com/
       title: API Documentation
       icon: book
     # - title: Production Dashboard
