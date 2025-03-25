@@ -1,0 +1,60 @@
+apiVersion: backstage.io/v1beta2
+kind: Template
+metadata:
+  name: flipkart-microservice
+  title: Flipkart Microservice Template
+  description: Scaffold a new Flipkart microservice with Node.js and Express.js
+  tags:
+    - e-commerce
+    - microservice
+    - flipkart
+spec:
+  owner: flipkart-devops-team
+  type: service
+
+  parameters:
+    - title: Flipkart Microservice Details
+      required:
+        - name
+        - owner
+        - repo
+      properties:
+        name:
+          type: string
+          title: Service Name
+          description: Enter the name of the microservice (e.g., cart-service)
+        owner:
+          type: string
+          title: Owner
+          description: Team responsible for this service
+          default: flipkart-devops-team
+        repo:
+          type: string
+          title: GitHub Repository URL
+          description: The GitHub repository where this service will be hosted
+
+  steps:
+    - id: fetch-repo
+      name: Clone Flipkart Microservice Template
+      action: fetch:template
+      input:
+        url: https://github.com/flipkart-org/microservice-template
+        targetPath: ./{{ parameters.name }}
+        values:
+          serviceName: "{{ parameters.name }}"
+          owner: "{{ parameters.owner }}"
+
+    - id: publish
+      name: Publish to GitHub
+      action: publish:github
+      input:
+        allowedHosts: ["github.com"]
+        repoUrl: github.com/{{ parameters.repo }}
+        branch: main
+        repoVisibility: private
+
+    - id: register
+      name: Register Service in Backstage
+      action: catalog:register
+      input:
+        repoContentsUrl: "{{ steps.publish.output.repoContentsUrl }}"
