@@ -12,7 +12,7 @@ metadata:
     - orders
 spec:
   type: service
-  owner: flipkart-devops-team
+  owner: infrastructure
   lifecycle: production
   providesApis:
     - flipkart-order-api
