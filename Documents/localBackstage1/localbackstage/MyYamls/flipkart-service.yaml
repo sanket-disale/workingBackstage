@@ -51,4 +51,5 @@ spec:
     - component:flipkart-payment-service
     - component:flipkart-inventory-service
     - component:flipkart-shipping-service
+  subcomponentOf: flipkart-service
 
