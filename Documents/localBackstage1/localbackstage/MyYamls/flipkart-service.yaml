@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: flipkart-order-service
+  description: Handles order management for Flipkart.
+  annotations:
+    github.com/project-slug: flipkart/flipkart-order-service
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - ecommerce
+    - microservice
+    - orders
+spec:
+  type: service
+  owner: flipkart-devops-team
+  lifecycle: production
+  providesApis:
+    - flipkart-order-api
+  dependsOn:
+    - resource:flipkart-database
+    - component:flipkart-payment-service
