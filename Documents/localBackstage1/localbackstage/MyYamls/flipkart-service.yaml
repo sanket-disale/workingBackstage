@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: flipkart-order-service
-  description: Manages order processing, tracking, and history for Flipss customers.
+  description: Manages order processing, tracking, and history for Flipkart customers.
   annotations:
     github.com/project-slug: flipkart/flipkart-order-service
     backstage.io/techdocs-ref: dir:.
@@ -16,6 +16,25 @@ metadata:
     - microservice
     - orders
     - payments
+  links:
+    - url: https://www.google.com/
+      title: API Documentation
+      icon: book
+    - title: Production Dashboard
+      url: https://grafana.flipkart.com/d/abc123/orders-dashboard
+      icon: dashboard
+    - title: GitHub Repository
+      url: https://github.com/flipkart/flipkart-order-service
+      icon: github
+    - title: CI/CD Pipeline
+      url: https://circleci.com/project/github/flipkart/flipkart-order-service
+      icon: build
+    - title: PagerDuty Alerts
+      url: https://flipkart.pagerduty.com/services/flipkart-order-pagerduty
+      icon: alert
+    - title: Sentry Logs
+      url: https://sentry.flipkart.com/projects/flipkart-order-service
+      icon: bug
 spec:
   type: service
   owner: infrastructure
@@ -32,22 +51,4 @@ spec:
     - component:flipkart-payment-service
     - component:flipkart-inventory-service
     - component:flipkart-shipping-service
-  links:
-    - url: https://www.google.com/
-      title: API Documentation
-      icon: book
-    # - title: Production Dashboard
-    #   url: https://grafana.flipkart.com/d/abc123/orders-dashboard
-    #   icon: dashboard
-    # - title: GitHub Repository
-    #   url: https://github.com/flipkart/flipkart-order-service
-    #   icon: github
-    # - title: CI/CD Pipeline
-    #   url: https://circleci.com/project/github/flipkart/flipkart-order-service
-    #   icon: build
-    # - title: PagerDuty Alerts
-    #   url: https://flipkart.pagerduty.com/services/flipkart-order-pagerduty
-    #   icon: alert
-    # - title: Sentry Logs
-    #   url: https://sentry.flipkart.com/projects/flipkart-order-service
-    #   icon: bug
+
