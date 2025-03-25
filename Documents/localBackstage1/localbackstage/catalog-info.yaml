@@ -1,22 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: artist-web
-  description: The place to be, for great artists
-  labels:
-    example.com/custom: custom_label_value
+  name: recommendation-engine
   annotations:
-    example.com/service-discovery: artistweb
-    circleci.com/project-slug: github/example-org/artist-website
-  tags:
-    - java
-  links:
-    - url: https://admin.example-org.com
-      title: Admin Dashboard
-      icon: dashboard
-      type: admin-dashboard
+    github.com/project-slug: netflix/recommendation-engine
+    backstage.io/techdocs-ref: dir:.
+    jenkins.io/job-full-name: netflix/recommendation-engine-pipeline
+    kubernetes.io/namespace: recommendation
+    datadoghq.com/monitor: netflix-recommendation-alerts
 spec:
-  type: website
+  type: service
+  owner: ai-team
   lifecycle: production
-  owner: artist-relations-team
-  system: public-websites
