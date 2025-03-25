@@ -10,5 +10,5 @@ metadata:
     datadoghq.com/monitor: netflix-recommendation-alerts
 spec:
   type: service
-  owner: ai-team
+  owner: infrastructure
   lifecycle: production
