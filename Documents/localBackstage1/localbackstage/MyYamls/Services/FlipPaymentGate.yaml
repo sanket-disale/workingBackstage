@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: flipkart-payment-gateway
+  title: Flipkart Payment Gateway
+  description: Secure payment gateway for processing online transactions.
+  tags:
+    - payments
+    - gateway
+    - transactions
+spec:
+  type: service
+  lifecycle: production
+  owner: payments-team
+  system: flipkart-ecommerce-platform
+  domain: flipkart-payments
+  providesApis:
+    - flipkart-payment-api
