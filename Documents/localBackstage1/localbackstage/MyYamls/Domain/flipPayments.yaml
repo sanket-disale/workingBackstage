@@ -8,5 +8,15 @@ metadata:
     - payments
     - transactions
     - refunds
+  links:
+    - url: https://flipkart.com/payments/docs
+      title: Flipkart Payments Documentation
+      icon: book
+    - url: https://flipkart.com/payments/api
+      title: Payments API Reference
+      icon: api
+    - url: https://status.flipkart.com
+      title: System Status
+      icon: heartbeat
 spec:
-  owner: Infrastructure
+  owner: payments-team
