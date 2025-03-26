@@ -8,6 +8,19 @@ metadata:
     - payments
     - gateway
     - transactions
+  links:
+    - url: https://flipkart.com/payment-gateway/docs
+      title: Payment Gateway Docs
+      icon: book
+    - url: https://github.com/flipkart/payment-gateway
+      title: GitHub Repository
+      icon: github
+    - url: https://flipkart.com/payment-gateway/ci-cd
+      title: CI/CD Pipeline
+      icon: build
+    - url: https://flipkart.com/payment-gateway/logs
+      title: Service Logs
+      icon: file-text
 spec:
   type: service
   lifecycle: production
@@ -16,3 +29,4 @@ spec:
   domain: flipkart-payments
   providesApis:
     - flipkart-payment-api
+
