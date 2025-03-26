@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: flipkart-wallet-service
+  title: Flipkart Wallet Service
+  description: Manages Flipkart Wallet transactions, balances, and refunds.
+  tags:
+    - wallet
+    - transactions
+    - payments
+spec:
+  type: service
+  lifecycle: production
+  owner: payments-team
+  system: flipkart-ecommerce-platform
+  domain: flipkart-payments
+  providesApis:
+    - flipkart-wallet-api
