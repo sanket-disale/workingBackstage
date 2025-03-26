@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: flipkart-payments
+  title: Flipkart Payments
+  description: Manages all payments, transactions, and refunds within Flipkart.
+  tags:
+    - payments
+    - transactions
+    - refunds
+spec:
+  owner: Infrastructure
