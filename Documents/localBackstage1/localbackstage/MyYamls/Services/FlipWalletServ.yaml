@@ -8,6 +8,19 @@ metadata:
     - wallet
     - transactions
     - payments
+  links:
+    - url: https://flipkart.com/wallet/docs
+      title: Wallet Service Docs
+      icon: book
+    - url: https://github.com/flipkart/wallet-service
+      title: GitHub Repository
+      icon: github
+    - url: https://flipkart.com/wallet/status
+      title: Wallet Service Status
+      icon: heartbeat
+    - url: https://flipkart.com/wallet/logs
+      title: Service Logs
+      icon: file-text
 spec:
   type: service
   lifecycle: production
